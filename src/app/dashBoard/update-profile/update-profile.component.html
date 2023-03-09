@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Update Profile</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <link rel="stylesheet" href="update-profile.component.css">
+</head>
+<body ng-controller="myCtrl">
+  <div class="container">
+    <h2>Update Profile</h2>
+    <form>
+      <div class="form-group">
+        <label for="name">Full Name:</label>
+        <input type="text" class="form-control" id="name" ng-model="name" placeholder="Ayush Modi" disabled>
+      </div>
+      <div class="form-group">
+        <label for="parentmobile">Parent Mobile Number:</label>
+        <input type="text" class="form-control" id="parentmobile" ng-model="parentMobile" placeholder="9934728465" disabled>
+      </div>
+      <div class="form-group">
+        <label for="parentemail">Parent Email ID:</label>
+        <input type="email" class="form-control" id="parentemail" ng-model="parentEmail" placeholder="parent123@gmail.com" disabled>
+      </div>
+      <div class="form-group">
+        <label for="image">Update Image:</label>
+        <input type="file" id="image" ng-model="image">
+      </div>
+      <button type="submit" class="btn btn-default" ng-click="update()">Update</button>
+    </form>
+  </div>
+  <script>
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function($scope) {
+      // Initialize form values
+      $scope.name = '';
+      $scope.parentMobile = '';
+      $scope.parentEmail = '';
+      $scope.image = '';
+
+      // Update profile function
+      $scope.update = function() {
+        // Make API call to update student profile
+        // ...
+        // Display success or error message
+        alert('Profile updated successfully!');
+      }
+    });
+  </script>
+</body>
+</html>
