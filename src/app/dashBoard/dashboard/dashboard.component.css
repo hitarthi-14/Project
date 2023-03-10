@@ -1,0 +1,9 @@
+img{
+    height: 300px;
+}
+#Logout{
+    float: right;
+    margin-top: 9px;
+    /* background-color: red; */
+    color: white;
+}
